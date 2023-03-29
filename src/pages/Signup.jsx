@@ -1,4 +1,4 @@
-import { async } from '@firebase/util'
+
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import  {UserAuth} from '../context/AuthContex'
@@ -7,7 +7,7 @@ import  {UserAuth} from '../context/AuthContex'
 const Signup = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const {user, signUp} = UserAuth()
+    const { signUp} = UserAuth()
     const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
